@@ -1,4 +1,4 @@
-name: prod
+name: local
 variables:
   - name: baseURL
     value: https://echo.usebruno.com
