@@ -63,7 +63,7 @@ Add a secret row with:
 
 - **Name** — a local alias used to reference the secret (e.g. `usebruno`)
 - **Secret Name/ARN** — the full ARN of your secret in AWS Secrets Manager  
-  (e.g. `arn:aws:secretsmanager:us-east-1:767397862016:secret:aws_bruno_test-wIzmBH`)
+  
 
    ![Secret configured with ARN](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-f6e6dbad-2edf-409e-8a0f-3e6e0f52d0bb.png)
 
