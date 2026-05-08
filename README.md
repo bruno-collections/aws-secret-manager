@@ -35,7 +35,7 @@ Open Bruno and navigate to **Preferences** (top-left menu).
    | Session Token     | *(optional)* STS session token     |
    | Region            | e.g. `US East (N. Virginia) (us-east-1)` |
 
-   ![Add Secret Provider dialog](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-6b5a6b4f-a6cd-4648-94ce-9523a354d17d.png)
+   ![Add Secret Provider dialog](assets/01-add-secret-provider.png)
 
 ### Step 3 — Test the Provider
 
@@ -55,7 +55,7 @@ Click **Save** to store the secret provider configuration.
 2. Navigate to the **Secrets** tab.
 3. From the provider dropdown, select **AWS Secrets**.
 
-   ![Select AWS Secrets provider](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-8ca756de-3388-4abf-b004-47f2d75f958f.png)
+   ![Select AWS Secrets provider](assets/02-select-aws-secrets.png)
 
 ### Step 6 — Configure the Secret Entry
 
@@ -65,7 +65,7 @@ Add a secret row with:
 - **Secret Name/ARN** — the full ARN of your secret in AWS Secrets Manager  
   
 
-   ![Secret configured with ARN](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-f6e6dbad-2edf-409e-8a0f-3e6e0f52d0bb.png)
+   ![Secret configured with ARN](assets/03-secret-configured.png)
 
 Click **Save**.
 
@@ -73,11 +73,11 @@ Click **Save**.
 
 Click **Fetch Secrets**, select your provider (e.g. `AWS`), and click **Fetch** in the confirmation dialog.
 
-   ![Fetch AWS Secrets dialog](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-a858717f-273b-4375-950a-cae47ee93cc7.png)
+   ![Fetch AWS Secrets dialog](assets/04-fetch-secrets-dialog.png)
 
 Once fetched successfully, the **Secrets** column will display the available keys (e.g. `access_key`, `username`, `password`, `version`).
 
-   ![Secrets fetched successfully](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-531d127a-6ba9-4fb2-8930-2012d95f53f1.png)
+   ![Secrets fetched successfully](assets/05-secrets-fetched.png)
 
 ---
 
@@ -100,7 +100,7 @@ $secrets.<secret-name>.<key-name>
 
 The resolved response will contain the actual secret value fetched from AWS:
 
-   ![Secret resolved in request](../../.cursor/projects/Users-ganeshpatil-Documents-test-workspace-collections-AWS-Secret-Manager/assets/image-dca3d32e-012f-4056-b052-26166500f5f8.png)
+   ![Secret resolved in request](assets/06-secret-in-request.png)
 
 ### Using Secrets in Scripts
 
@@ -126,7 +126,14 @@ AWS Secret Manager/
 ├── secrets.json            # Secret references (ARNs, no values)
 ├── .env                    # Local environment overrides (git-ignored)
 ├── .gitignore
-└── environments/
+├── environments/
+└── assets/
+    ├── 01-add-secret-provider.png
+    ├── 02-select-aws-secrets.png
+    ├── 03-secret-configured.png
+    ├── 04-fetch-secrets-dialog.png
+    ├── 05-secrets-fetched.png
+    └── 06-secret-in-request.png
 ```
 
 > **Note:** `secrets.json` stores only secret names/ARNs — never actual secret values. Actual values are fetched at runtime from AWS.
